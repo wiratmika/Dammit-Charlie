@@ -15,7 +15,7 @@ function result = calculateWithLagrange(x, y, newX)
   n = length(x);
   result = [];
 
-  for i = 1 : n
+  for i = 1 : length(newX)
     t = newX(i);
     sum = 0;
 
@@ -65,7 +65,7 @@ function result = calculateWithNewton(x, y, newX)
   n = length(x);
   result = [];
 
-  for i = 1 : n
+  for i = 1 : length(newX)
     t = newX(i);
     sum = a(1);
 
@@ -89,7 +89,11 @@ y = generateY(x);
 % x = [-1 0 2];
 % y = [3 -1 0];
 
-y
-calculateWithLagrange(x, y, x)
-calculateWithNewton(x, y, x)
+% y
+xPlot = -10:0.1:10;
+% Mari-mari dipilih
+% plot(xPlot, calculateWithLagrange(x, y, xPlot));
+% plot(xPlot, calculateWithNewton(x, y, xPlot));
+% calculateWithLagrange(x, y, x)
+% calculateWithNewton(x, y, x)
 disp('WOW MEREKA SEMUA HASILNYA SAMA');
