@@ -89,11 +89,20 @@ y = generateY(x);
 % x = [-1 0 2];
 % y = [3 -1 0];
 
-% y
-xPlot = -10:0.1:10;
+y
+% xPlot = -10:0.1:10;
 % Mari-mari dipilih
-% plot(xPlot, calculateWithLagrange(x, y, xPlot));
+%plot(xPlot, calculateWithLagrange(x, y, xPlot));
+%xlabel("x");
+%ylabel("f(x) interpolan");
+%title("Plot fungsi interpolan menggunakan basis Lagrange");
+
 % plot(xPlot, calculateWithNewton(x, y, xPlot));
-% calculateWithLagrange(x, y, x)
-% calculateWithNewton(x, y, x)
+% xlabel("x");
+% ylabel("f(x) interpolan");
+% title("Plot fungsi interpolan menggunakan basis Newton");
+newY = calculateWithLagrange(x, y, x);
+newY - y
+newY = calculateWithNewton(x, y, x);
+newY - y
 disp('WOW MEREKA SEMUA HASILNYA SAMA');
